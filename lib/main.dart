@@ -3,7 +3,7 @@ import 'IU/jour_1/exercice_1.dart';
 import 'IU/jour_1/exercice_2.dart';
 import 'IU/jour_1/exercice_3.dart';
 
-main() {
+void main() {
   runApp(MaterialApp(home: HomePage()));
 }
 class HomePage extends StatelessWidget {
