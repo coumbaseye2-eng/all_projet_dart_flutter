@@ -1,12 +1,15 @@
+import 'package:all_projet_dart_flutter/IU/jour_1/jour_1.dart';
+import 'package:all_projet_dart_flutter/IU/jour_2/exercice_1.dart';
+import 'package:all_projet_dart_flutter/IU/jour_2/jour_2.dart';
 import 'package:flutter/material.dart';
-import 'IU/jour_1/exercice_1.dart';
-import 'IU/jour_1/exercice_2.dart';
-import 'IU/jour_1/exercice_3.dart';
+
 
 void main() {
   runApp(MaterialApp(home: HomePage()));
 }
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,38 +19,27 @@ class HomePage extends StatelessWidget {
         children: [
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue),
-            child: Text("Ouvrir l'Échangeur",
+                backgroundColor: Colors.orange),
+            child: Text("Ouvrir Jour_1",
               style: TextStyle(color: Colors.white),),
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => EchangPage()));
+                  context, MaterialPageRoute(builder: (context) => FirstDayPage()));
             },
           ),
-          SizedBox(height: 8),
+          SizedBox(height: 24),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue),
-            child: Text("Calculateur d'Aire",style: TextStyle(color: Colors.white),),
-            onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => AirePage()));
-            },
-          ),
-          SizedBox(height: 8),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue),
-            child: Text("Convertisseur de Secondes",
+                backgroundColor: Colors.cyan.shade600),
+            child: Text("Ouvrir Jour_2",
               style: TextStyle(color: Colors.white),),
             onPressed: () {
               Navigator.push(
-              context, MaterialPageRoute(builder: (context) => TimePage()),
-              );
+                  context, MaterialPageRoute(builder: (context) => SecondDayPage()));
             },
           ),
-        ],
-      ),
+          ],
+      )
     );
   }
 }
